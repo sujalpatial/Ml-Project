@@ -1,9 +1,7 @@
 services:
   - type: web
-    name: ml-app
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    envVars:
-      - key: PORT
-        value: 10000
+    name: ml-webapp
+    env: python
+    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python application.py"
